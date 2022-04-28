@@ -1,0 +1,118 @@
+:root {
+    --color-principal:#955E08;
+    --color-secundario:#000;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: abril-display,serif;
+    font-weight: 850;
+    font-style: normal;
+}
+
+html {
+    padding: 1rem;
+}
+
+@media only screen and (max-width: 400px) {
+    
+body {
+    min-width: 320px;
+    
+    border: 1px solid #000;
+}
+.logo {
+    width: 25%;
+}
+.logo_horizontal {
+    display: none;
+    max-height: 0;
+    width: auto;
+}
+}
+@media only screen and (min-width: 401px) and (max-width:575px) {
+    body {
+        background-color: red;
+}
+
+.logo {
+    width: 25%;
+}
+.logo_horizontal {
+    display: none;
+    max-height: 0;
+    width: auto;
+}
+}
+@media only screen and (min-width: 576px) and (max-width:767px) {
+    body{
+        background-color: blueviolet;
+    }
+    
+    .logo {
+        width: 25%;
+        max-width: 130px;
+    }
+    .logo_horizontal {
+        display: none;
+        max-height: 0;
+        width: auto;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width:991px) {
+    body{
+        background-color: greenyellow;
+    }
+    .logo {
+        display: none;
+        max-height: 0;
+        width: auto;
+    }
+    .logo_horizontal {
+        width: 30%;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width:1200px) {
+    body{
+        background-color: orange;
+        
+    }
+    .contenedor_general {
+        max-width: 1024px;
+        margin: 0 auto;
+        border: 1px solid #000;  
+    }
+    .logo {
+        display: none;
+        max-height: 0;
+        width: auto;
+    }
+    .logo_horizontal {
+        width: 28%;
+        max-width: 280px;
+    }
+}
+@media only screen and (min-width: 1201px)  {
+    body{
+        background-color: blue;
+        max-width: 1024px;
+        margin: 0 auto;
+        
+    }
+    .contenedor_general {
+        max-width: 1024px;
+        margin: 0 auto;
+        border: 1px solid #000;  
+    }
+    .logo {
+        display: none;
+        max-height: 0;
+        width: auto;
+    }
+    .logo_horizontal {
+        width: 28%;
+        max-width: 280px;
+    }
+}
