@@ -1,118 +1,505 @@
 :root {
-    --color-principal:#955E08;
-    --color-secundario:#000;
-    font-size: 18px;
-    box-sizing: border-box;
+  --color-principal: #955e08;
+  --color-secundario: #000;
+  --blanco: #ffffff;
+
+  box-sizing: border-box;
 }
-
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: abril-display,serif;
-    font-weight: 850;
-    font-style: normal;
-}
-
 html {
-    padding: 1rem;
+  font-size: 18px;
+  padding: 1rem;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: abril-display, serif;
+  font-weight: 850;
+  font-style: normal;
+}
+a,
+button {
+  font-family: abril-display, serif;
+  font-weight: 650;
+  font-style: normal;
+}
+a {
+  color: var(--color-principal);
+  transition: color 0.4s linear;
+}
+a:hover {
+  color: var(--color-secundario);
+  transition: color 0.4s ease-in-out;
+}
+
+/* Movil */
 @media only screen and (max-width: 400px) {
-    
-body {
+  body {
     min-width: 320px;
-    
-    border: 1px solid #000;
-}
-.logo {
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
     width: 25%;
-}
-.logo_horizontal {
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+  .logo_horizontal {
     display: none;
     max-height: 0;
     width: auto;
+  }
+  .hamburguer_menu {
+    background-color: var(--color-principal);
+    width: 2rem;
+    height: 2rem;
+    display: block;
+    margin: 0.5rem;
+    color: var(--blanco);
+    font-size: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    aspect-ratio: 1/1;
+    vertical-align: middle !important;
+    transition: background-color 0.5s ease-in-out;
+  }
+  .hamburguer_menu:hover {
+    background-color: var(--color-secundario);
+    transition: background-color 0.5s ease-in-out;
+  }
+  .nav_menu_principal {
+  }
+  #menu {
+    display: none;
+    /* max-width: 0px;
+    max-height: 0px; */
+  }
+  #menu:target {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  .menu_item {
+    color: var(--blanco);
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-family: abril-display, serif;
+    font-weight: 725;
+    font-style: normal;
+    margin-bottom: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+  .menu_item:hover a {
+    color: var(--color-principal);
+    transition: color 0.5s ease-in-out;
+  }
+  .menu_item a {
+    color: var(--blanco);
+    transition: color 0.5s ease-in-out;
+  }
+  .cerrar {
+    background-color: red !important;
+  }
+  .cerrar::after {
+    right: 1rem;
+    top: 1rem;
+    width: 2rem !important;
+    height: 2rem !important;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: var(--blanco);
+    content: "×";
+    cursor: pointer;
+  }
+  .cerrar::before {
+    content: "";
+    cursor: default;
+  }
+  .cerrar:hover::after {
+    background-color: var(--color-principal);
+    transition: background-color 0.5s ease-in-out;
+  }
 }
-}
-@media only screen and (min-width: 401px) and (max-width:575px) {
-    body {
-        background-color: red;
-}
+/* Movil */
+@media only screen and (min-width: 401px) and (max-width: 575px) {
+  body {
+    background-color: red;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-.logo {
+  .logo {
     width: 25%;
-}
-.logo_horizontal {
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+  .logo_horizontal {
     display: none;
     max-height: 0;
     width: auto;
+  }
+  .hamburguer_menu {
+    background-color: var(--color-principal);
+    width: 2rem;
+    height: 2rem;
+    display: block;
+    margin: 0.5rem;
+    color: var(--blanco);
+    font-size: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    aspect-ratio: 1/1;
+    vertical-align: middle !important;
+  }
+  .hamburguer_menu:hover {
+    background-color: var(--color-secundario);
+    transition: background-color 0.5s ease-in-out;
+  }
+  .nav_menu_principal {
+  }
+
+  #menu {
+    display: none;
+    /* max-width: 0px;
+    max-height: 0px; */
+  }
+  #menu:target {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  .menu_item {
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-family: abril-display, serif;
+    font-weight: 725;
+    font-style: normal;
+    margin-bottom: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+  .menu_item:hover a {
+    color: var(--color-principal);
+    transition: color 0.5s ease-in-out;
+  }
+  .menu_item a {
+    color: var(--blanco);
+    transition: color 0.5s ease-in-out;
+  }
+  .cerrar {
+    background-color: red !important;
+  }
+  .cerrar::after {
+    right: 1rem;
+    top: 1rem;
+    width: 2rem !important;
+    height: 2rem !important;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: var(--blanco);
+    content: "×";
+    cursor: pointer;
+  }
+  .cerrar::before {
+    content: "";
+    cursor: default;
+  }
+  .cerrar:hover::after {
+    background-color: var(--color-principal);
+    transition: background-color 0.5s ease-in-out;
+  }
 }
+/* Movil */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  html {
+    font-size: 16px !important;
+  }
+  body {
+    background-color: blueviolet;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    width: 25%;
+    max-width: 130px;
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+  .logo_horizontal {
+    display: none;
+    max-height: 0;
+    width: auto;
+  }
+  .hamburguer_menu {
+    background-color: var(--color-principal);
+    width: 2rem;
+    height: 2rem;
+    display: block;
+    margin: 0.5rem;
+    color: var(--blanco);
+    font-size: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    aspect-ratio: 1/1;
+    vertical-align: middle !important;
+    transition: background-color 0.5s ease-in-out;
+  }
+  .hamburguer_menu:hover {
+    background-color: var(--color-secundario);
+    transition: background-color 0.5s ease-in-out;
+  }
+  .nav_menu_principal {
+  }
+  #menu {
+    display: none;
+    /* max-width: 0px;
+    max-height: 0px; */
+  }
+  #menu:target {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  .menu_item {
+    color: var(--blanco);
+    padding: 1rem;
+    font-size: 1.75rem;
+    font-family: abril-display, serif;
+    font-weight: 725;
+    font-style: normal;
+    margin-bottom: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+  .menu_item:hover a {
+    color: var(--color-principal);
+    transition: color 0.5s ease-in-out;
+  }
+  .menu_item a {
+    color: var(--blanco);
+    transition: color 0.5s ease-in-out;
+  }
+  .cerrar {
+    background-color: red !important;
+  }
+  .cerrar::after {
+    right: 1rem;
+    top: 1rem;
+    width: 2rem !important;
+    height: 2rem !important;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: var(--blanco);
+    content: "×";
+    cursor: pointer;
+  }
+  .cerrar::before {
+    content: "";
+    cursor: default;
+  }
+  .cerrar:hover::after {
+    background-color: var(--color-principal);
+    transition: background-color 0.5s ease-in-out;
+  }
 }
-@media only screen and (min-width: 576px) and (max-width:767px) {
-    body{
-        background-color: blueviolet;
-    }
-    
-    .logo {
-        width: 25%;
-        max-width: 130px;
-    }
-    .logo_horizontal {
-        display: none;
-        max-height: 0;
-        width: auto;
-    }
+/* Tableta */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  body {
+    background-color: greenyellow;
+  }
+  html {
+    font-size: 16px;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid grey;
+  }
+
+  .contenedor_general {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  .logo {
+    display: none;
+    max-height: 0;
+    width: auto;
+    aspect-ratio: 1/1;
+  }
+  .logo_horizontal {
+    width: 28%;
+    max-width: 171px;
+    height: auto;
+  }
+  .hamburguer_menu {
+    display: none;
+    max-height: 0;
+    width: auto;
+  }
+  .nav_menu_principal {
+    flex-basis: 70%;
+    align-self: flex-end;
+    flex-grow: 1;
+  }
+  .menu {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1.5rem;
+    font-size: 1rem;
+  }
+  .menu_item a {
+    flex-basis: 20%;
+    flex-grow: 1;
+    display: inline-block;
+    text-align: center;
+  }
+  .menu_item:nth-of-type(4) a {
+    flex-basis: 22%;
+
+    background-color: aqua;
+  }
 }
-@media only screen and (min-width: 768px) and (max-width:991px) {
-    body{
-        background-color: greenyellow;
-    }
-    .logo {
-        display: none;
-        max-height: 0;
-        width: auto;
-    }
-    .logo_horizontal {
-        width: 30%;
-    }
+/* Laptop */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  body {
+    background-color: orange;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid grey;
+  }
+
+  .contenedor_general {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  .logo {
+    display: none;
+    max-height: 0;
+    width: auto;
+    aspect-ratio: 1/1;
+  }
+  .logo_horizontal {
+    width: 28%;
+    max-width: 171px;
+    height: auto;
+  }
+  .hamburguer_menu {
+    display: none;
+    max-height: 0;
+    width: auto;
+  }
+  .nav_menu_principal {
+    flex-basis: 70%;
+    align-self: flex-end;
+    flex-grow: 1;
+  }
+  .menu {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
 }
-@media only screen and (min-width: 992px) and (max-width:1200px) {
-    body{
-        background-color: orange;
-        
-    }
-    .contenedor_general {
-        max-width: 1024px;
-        margin: 0 auto;
-        border: 1px solid #000;  
-    }
-    .logo {
-        display: none;
-        max-height: 0;
-        width: auto;
-    }
-    .logo_horizontal {
-        width: 28%;
-        max-width: 280px;
-    }
-}
-@media only screen and (min-width: 1201px)  {
-    body{
-        background-color: blue;
-        max-width: 1024px;
-        margin: 0 auto;
-        
-    }
-    .contenedor_general {
-        max-width: 1024px;
-        margin: 0 auto;
-        border: 1px solid #000;  
-    }
-    .logo {
-        display: none;
-        max-height: 0;
-        width: auto;
-    }
-    .logo_horizontal {
-        width: 28%;
-        max-width: 280px;
-    }
+/* Escritorio */
+@media only screen and (min-width: 1201px) {
+  body {
+    background-color: blue;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid grey;
+  }
+  .contenedor_general {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  .logo {
+    display: none;
+    max-height: 0;
+    width: auto;
+    aspect-ratio: 1/1;
+  }
+  .logo_horizontal {
+    width: 28%;
+    max-width: 171px;
+    height: auto;
+  }
+  .hamburguer_menu {
+    display: none;
+    max-height: 0;
+    width: auto;
+  }
+  .nav_menu_principal {
+    flex-basis: 70%;
+    align-self: flex-end;
+    flex-grow: 1;
+  }
+  .menu {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
 }
