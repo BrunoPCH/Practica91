@@ -7,7 +7,6 @@
 }
 html {
   font-size: 18px;
-  padding: 1rem;
 }
 
 h1,
@@ -20,12 +19,22 @@ h6 {
   font-weight: 850;
   font-style: normal;
 }
+p {
+  font-family: abril-text, serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: center;
+  margin: 1.25rem 0;
+  font-weight: 400;
+  padding: 0 1rem;
+}
 a,
 button {
   font-family: abril-display, serif;
   font-weight: 650;
   font-style: normal;
 }
+
 a {
   color: var(--color-principal);
   transition: color 0.4s linear;
@@ -35,8 +44,33 @@ a:hover {
   transition: color 0.4s ease-in-out;
 }
 
+footer {
+  background-color: var(--color-secundario);
+  margin-top: 1rem;
+}
+.imagen_footer {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.contenedor_general {
+  padding: 1rem;
+}
+.color-principal {
+  color: var(--color-principal);
+}
+
+section {
+  margin: 2rem 0;
+}
+.imagen_intro {
+  margin: 1.5rem 0;
+}
+
 /* Movil */
 @media only screen and (max-width: 400px) {
+  html {
+    font-size: 18px;
+  }
   body {
     min-width: 320px;
   }
@@ -137,6 +171,37 @@ a:hover {
   .cerrar:hover::after {
     background-color: var(--color-principal);
     transition: background-color 0.5s ease-in-out;
+  }
+  .contenedor_intro {
+    display: flex;
+    flex-flow: column wrap;
+  }
+  h1 {
+    font-size: 2.25rem;
+    text-align: center;
+  }
+  .imagen_intro {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  button {
+    width: 100%;
+    border: 1px solid var(--color-principal);
+    background-color: var(--blanco);
+    text-align: center;
+    padding: 0.6rem;
+    margin: 1.5rem 0;
+    border-radius: 10px;
+    font-size: 1.75rem;
+    color: var(--color-principal);
+    transition: color 0.5s ease-in-out, border-color 0.5s ease-in-out;
+  }
+  button:hover {
+    color: var(--color-secundario);
+    border-color: var(--color-secundario);
+    transition: color 0.5s ease-in-out, border-color 0.5s ease-in-out;
   }
 }
 /* Movil */
@@ -400,26 +465,35 @@ a:hover {
     gap: 1.5rem;
     font-size: 1rem;
   }
-
+  .menu_item {
+    /* margin-bottom: 10px; */
+  }
+  .menu_item:nth-of-type(4) a {
+    flex-basis: 22%;
+  }
   .menu_item_link {
     flex-basis: 20%;
     flex-grow: 1;
     display: inline-block;
     text-align: center;
-    background-color: antiquewhite;
   }
   .menu_item_link::after {
     content: "";
     display: block;
-    width: 100%;
+    width: 0%;
+
     height: 2px;
     background-color: var(--color-principal);
+    transition: width 0.5s ease-in-out, background-color 0.7s linear;
   }
-
-  .menu_item:nth-of-type(4) a {
-    flex-basis: 22%;
-
-    background-color: aqua;
+  .menu_item_link:hover::after {
+    width: 100%;
+    transition: width 0.5s ease-in-out, background-color 0.7s linear;
+    background-color: var(--color-secundario);
+  }
+  .contenedor_intro {
+    display: flex;
+    flex-flow: row nowrap;
   }
 }
 /* Laptop */
@@ -466,12 +540,32 @@ a:hover {
     justify-content: space-between;
     gap: 1.5rem;
   }
+  .menu_item_link {
+    flex-basis: 20%;
+    flex-grow: 1;
+    display: inline-block;
+    text-align: center;
+  }
+  .menu_item_link::after {
+    content: "";
+    display: block;
+    width: 0%;
+
+    height: 2px;
+    background-color: var(--color-principal);
+    transition: width 0.5s ease-in-out, background-color 0.7s linear;
+  }
+  .menu_item_link:hover::after {
+    width: 100%;
+    transition: width 0.5s ease-in-out, background-color 0.7s linear;
+    background-color: var(--color-secundario);
+  }
 }
 /* Escritorio */
 @media only screen and (min-width: 1201px) {
   body {
     background-color: blue;
-    max-width: 1024px;
+
     margin: 0 auto;
   }
   header {
@@ -511,5 +605,25 @@ a:hover {
     flex-flow: row nowrap;
     justify-content: space-between;
     gap: 1.5rem;
+  }
+  .menu_item_link {
+    flex-basis: 20%;
+    flex-grow: 1;
+    display: inline-block;
+    text-align: center;
+  }
+  .menu_item_link::after {
+    content: "";
+    display: block;
+    width: 0%;
+
+    height: 2px;
+    background-color: var(--color-principal);
+    transition: width 0.5s ease-in-out, background-color 0.7s linear;
+  }
+  .menu_item_link:hover::after {
+    width: 100%;
+    transition: width 0.5s ease-in-out, background-color 0.7s linear;
+    background-color: var(--color-secundario);
   }
 }
