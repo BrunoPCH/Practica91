@@ -50,29 +50,43 @@
             </section>
             <section class="contenedor_quienes-somos">
                 <h2>La manada</h2>
-                <img src="" alt="La manada">
-                <p>Somos un grupo de fanáticos de la raza Airedale Terrier y buscamos construir una gran comunidad.
-                </p>
-                <p>En ella ofreceremos información importante, servicios y proveedores para hacer mas fácil el cuidado
-                    de tu perro.</p>
+                <img class="imagen_quienes-somos" src="imagenes/manada450px.png"
+                    srcset="imagenes/manada800px.png 800w, imagenes/manada1200px.png 1200w" alt="La manada">
+                <div>
+                    <p>Somos un grupo de fanáticos de la raza Airedale Terrier y buscamos construir una gran comunidad.
+                    </p>
+                    <p>En ella ofreceremos información importante, servicios y proveedores para hacer mas fácil el
+                        cuidado
+                        de tu perro.</p>
+                </div>
             </section>
             <section class="contenedor_registro" id="registro">
-                <img class="" src="imagenes/logosterrier1.png"
+                <img class="imagen_registro" src="imagenes/logosterrier1.png"
                     srcset="imagenes/logosterrier_60px.jpg 60w, imagenes/logosterrier_80px.png 80w, imagenes/logosterrier_100px.png 100w, imagenes/logosterrier_120px.png 120w, imagenes/logosterrier_140px.png 140w, imagenes/logosterrier_280px.png 280w"
                     sizes="(max-width: 400px) 100px,(min-width: 401px) 140px" alt="Logo Airedale Terrier Club México">
                 <h2>¡Unete al club!</h2>
                 <p>Llena los campos correctamente:</p>
-                <form action="" id="">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" name="nombre" id="" placeholder="Dogberto">
-                    <label for="apellido_paterno">Apellido Paterno:</label>
-                    <input type="text" name="apellido_paterno" id="" placeholder="Perrez">
+                <form action="" id="" class="formulario_registro">
+                    <div class="form-item">
+                        <label for="nombre" class="">Nombre:</label>
+                        <input type="text" name="nombre" id="" placeholder="Dogberto" class="form-item_input "
+                            pattern="^[a-zA-ZñÑáéíóúÁÉÍÓÚ][a-zA-ZñÑáéíóúÁÉÍÓÚ0-9-_\.]{3,20}$" required>
+                        <img class=" icono-validacion " src="imagenes/iconovalidation.svg"
+                            alt="Icono de validación de campo">
+                    </div>
+                    <div class="form-item">
+                        <label for="apellido_paterno">Apellido Paterno:</label>
+                        <input type="text" name="apellido_paterno" id="" placeholder="Perrez" class="form-item_input "
+                            pattern="^[a-zA-ZñÑáéíóúÁÉÍÓÚ][a-zA-ZñÑáéíóúÁÉÍÓÚ0-9-_\.]{3,20}$" required>
+                        <img class=" icono-validacion " src="imagenes/iconovalidation.svg"
+                            alt="Icono de validación de campo">
+                    </div>
                     <label for="apellido_materno">Apellido Materno:</label>
-                    <input type="text" name="apellido_materno" id="" placeholder="de la Goof">
+                    <input type="text" name="apellido_materno" id="" placeholder="de la Goof" required>
                     <label for="edad">Edad:</label>
-                    <input type="number" name="edad" id="" min="18" max="100">
+                    <input type="number" name="edad" id="" min="18" max="100" required>
                     <label for="pais">País:</label>
-                    <input type="text" list="paises" placeholder="Selecciona una opción">
+                    <input type="text" list="paises" placeholder="Selecciona una opción" required>
                     <datalist id="paises">
                         <option value="Afghanistan">
                         <option value="Albania">
@@ -315,17 +329,17 @@
                         <option value="Zimbabwe">
                     </datalist>
                     <label for="mail">e-mail</label>
-                    <input type="email" name="" id="mail" placeholder="canito@cancan.com">
+                    <input type="email" name="" id="mail" placeholder="canito@cancan.com" required>
                     <label for="relacion_airedales">¿Qué relación tienes con los airedales?</label>
                     <input type="text" name="relacion_airedales" list="lista-relacion-airedales" id=""
-                        placeholder="Soy...">
+                        placeholder="Soy..." required>
                     <datalist id="lista-relacion-airedales">
                         <option value="Soy criador"></option>
                         <option value="Soy dueño"></option>
                         <option value="Soy veterinario"></option>
                         <option value="Soy fanatico"></option>
                     </datalist>
-                    <input type="checkbox" name="terminos y condiciones">
+                    <input type="checkbox" name="terminos y condiciones" required>
                     <label for="terminos-y-condiciones">Acepto las <a href="#">políticas y términos</a> de <a
                             href="#">airedaleterrier.info</a></label>
                     <button type="submit">Enviar</button>
