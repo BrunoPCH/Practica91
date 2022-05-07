@@ -480,6 +480,7 @@ input:not(:placeholder-shown):invalid + .icono-validacion {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 1rem;
   }
   .logo {
     width: 25%;
