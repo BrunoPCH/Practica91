@@ -407,6 +407,15 @@ input:not(:placeholder-shown):invalid + .icono-validacion {
     column-gap: 1rem;
     margin: 1rem 0;
   }
+  #relacion_airedales {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: stretch;
+    justify-content: flex-end;
+    height: 4.2rem;
+    column-gap: 1rem;
+    margin: 1rem 0;
+  }
 
   .form-item_input {
     width: calc(90% - 1rem);
