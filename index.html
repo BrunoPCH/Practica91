@@ -36,7 +36,7 @@
             </nav>
         </header>
         <main>
-            <section class="contenedor_intro">
+            <section class="contenedor_intro ">
                 <h1>Todo sobre los<span class="color-principal">&NonBreakingSpace;Airedales</span></h1>
                 <img class="imagen_intro" src="imagenes/airedale_cafe_home1200.jpg"
                     srcset="imagenes/airedale_cafe_home450px.jpg 450w, imagenes/airedale_cafe_home800px.jpg 800w"
@@ -49,9 +49,9 @@
                     <button onclick="location.href='#registro'">Registrar</button>
                 </div>
             </section>
-            <section class="contenedor_quienes-somos">
-                <h2>La manada</h2>
-                <img class="imagen_quienes-somos" src="imagenes/manada450px.png"
+            <section class="contenedor_quienes-somos ">
+                <h2 class="">La manada</h2>
+                <img class="imagen_quienes-somos " src="imagenes/manada450px.png"
                     srcset="imagenes/manada800px.png 800w, imagenes/manada1200px.png 1200w" alt="La manada">
                 <div>
                     <p>Somos un grupo de fanáticos de la raza Airedale Terrier y buscamos construir una gran comunidad.
@@ -61,10 +61,13 @@
                         de tu perro.</p>
                 </div>
             </section>
-            <section class="contenedor_registro" id="registro">
-                <img class="imagen_registro" src="imagenes/logosterrier1.png"
-                    srcset="imagenes/logosterrier_60px.jpg 60w, imagenes/logosterrier_80px.png 80w, imagenes/logosterrier_100px.png 100w, imagenes/logosterrier_120px.png 120w, imagenes/logosterrier_140px.png 140w, imagenes/logosterrier_280px.png 280w"
-                    sizes="(max-width: 400px) 100px,(min-width: 401px) 140px" alt="Logo Airedale Terrier Club México">
+            <section class="contenedor_registro " id="registro">
+                <img class="imagen_registro " src="imagenes/logosterrier1.png"
+                    srcset="imagenes/logosterrier_60px.jpg 60w, imagenes/logosterrier_80px.png 80w, imagenes/logosterrier_100px.png 100w, imagenes/logosterrier_120px.png 120w, imagenes/logosterrier_140px.png 140w, imagenes/logosterrier_280px.png 280w, imagenes/logosterrier_560px.png 560w "
+                    sizes="(max-width: 400px) 300px,(min-width: 401px) 140px" alt="Logo Airedale Terrier Club México">
+                <img class="imagen_registro_horizontal" src="imagenes/logosterrierhorizontal_230px.png"
+                    srcset="imagenes/logosterrierhorizontal_230px.png 230w, imagenes/logosterrierhorizontal_300px.png 300w, imagenes/logosterrierhorizontal_600px.png, 600w"
+                    alt="Logo Airedale Terrier Club México">
                 <h2>¡Unete al club!</h2>
                 <p>Llena los campos correctamente:</p>
                 <form action="" id="" class="formulario_registro">
@@ -90,7 +93,7 @@
                         <img class=" icono-validacion " src="imagenes/iconovalidation.svg"
                             alt="Icono de validación de campo">
                     </div>
-                    <div class="form-item">
+                    <div class="form-item input_edad">
                         <label for="edad">Edad:</label>
                         <input type="number" name="edad" id="" min="18" max="100" class="form-item_input"
                             placeholder="+18" required>
@@ -368,7 +371,7 @@
                     </div>
 
                     <div class="contenedor_checkbox_terminos_condiciones ">
-                        <input class="input_checkbox e1" type="checkbox" name="terminos-y-condiciones" id="" required>
+                        <input class="input_checkbox " type="checkbox" name="terminos-y-condiciones" id="" required>
                         <label class="label_terminos-condiciones" for="terminos-y-condiciones">Acepto las <a
                                 href="#">políticas y términos</a>
                             de <a href="#">airedaleterrier.info</a></label>
