@@ -724,7 +724,7 @@ input:not(:placeholder-shown):invalid + .icono-validacion {
     font-size: 24px !important;
   }
   body {
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
   }
   header {
     display: flex;
